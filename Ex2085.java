@@ -39,4 +39,27 @@ public class Ex2085 {
     }
 }
 
+/*class Solution {
+    public int countWords(String[] words1, String[] words2) {
+     
+        int count = 0;
+        
+        Map<String,Integer> map = new HashMap<>();
+        Map<String,Integer> map2 = new HashMap<>();
+        
+        for(String s : words1)
+            map.put(s,map.getOrDefault(s,0)+1);
+        
+        for(String s : words2)
+            map2.put(s,map2.getOrDefault(s,0)+1);
+        
+        for(String s : words1)
+            if(map.get(s) == 1 && map2.containsKey(s))
+                if(map2.get(s) == 1)
+                count++;
+        
+        return count;
+        
+    }
+}
 //https://leetcode.com/problems/count-common-words-with-one-occurrence/
