@@ -26,4 +26,20 @@ public class Ex219 {
     }
 }
 
+
+/*class Solution {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        int len = nums.length;
+       
+        HashMap<Integer, Integer> m = new HashMap<>();
+        Integer n;
+        for (int i = 0;i < len; i++){
+            n = m.put(nums[i], i);
+            if (n != null && i - n <= k) return true;
+            
+            
+        }return false;
+    }
+}
+
 //https://leetcode.com/problems/contains-duplicate-ii/
